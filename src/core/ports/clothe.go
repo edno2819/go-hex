@@ -1,10 +1,15 @@
 package core_ports
 
-import core_entities "github.com/edno2819/go-hex/src/core/entities"
+import (
+	"context"
+
+	core_entities "github.com/edno2819/go-hex/src/core/entities"
+)
 
 type ClotheRepository interface {
-	GetByID(id string) (*core_entities.Clothe, error)
-	Create(clothe *core_entities.Clothe) error
-	Update(clothe *core_entities.Clothe) error
-	Delete(id string) error
+	GetByID(ctx context.Context, id string) (*core_entities.Clothe, error)
+	List(ctx context.Context, skip, limit uint64) ([]core_entities.Clothe, error)
+	Create(ctx context.Context, clothe *core_entities.Clothe) error
+	Update(ctx context.Context, clothe *core_entities.Clothe) error
+	Delete(ctx context.Context, id string) error
 }
