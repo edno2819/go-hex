@@ -8,6 +8,7 @@ Each external tool must have a corresponding adapter, connecting business functi
 
 - **Redis**: Database for caching information.
 - **PostgreSQL**: Primary database.
+- **MongoDB**: A second option database to test drive principal.
 - **Gin**: HTTP framework.
 - ...
 

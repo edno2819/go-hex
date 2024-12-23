@@ -1,6 +1,6 @@
 package core_entities
 
-type Clothes struct {
+type Clothe struct {
 	ID          string  `json:"id"`          // Unique identifier for the clothing item
 	Name        string  `json:"name"`        // Name of the clothing item
 	Description string  `json:"description"` // Detailed description of the item
